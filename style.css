@@ -63,7 +63,7 @@ form button:hover {
   list-style: none;
 }
 
-/* todo items */
+/* todo */
 .todo {
   margin: 0.5rem;
   background: white;
@@ -93,4 +93,15 @@ form button:hover {
 /* overwrite the btn color */
 .complete-btn {
   background: rgb(73, 204, 73);
+}
+
+/* todo Items */
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+/* remove click on buttons icon */
+.fa-trash,
+.fa-check {
+  pointer-events: none;
 }
