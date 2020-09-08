@@ -44,4 +44,7 @@ function addTodo(evt) {
 
   // Append everything to the ul todo-list
   todoList.appendChild(todoDiv);
+
+  // Clear todo Input value
+  todoInput.value = "";
 }
