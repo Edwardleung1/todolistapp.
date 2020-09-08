@@ -17,8 +17,8 @@ function addTodo(evt) {
   todoDiv.classList.add("todo");
   // Create LI
   const newTodo = document.createElement("li");
-  // Add a value to it
-  newTodo.innerText = "hello";
+  // Add a value to it, by using the todoInput.value
+  newTodo.innerText = todoInput.value;
   // Add a class to it
   newTodo.classList.add("todo-item");
   // Append child to the todo DIV
