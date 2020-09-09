@@ -59,7 +59,7 @@ form button:hover {
 
 /* todo-list */
 .todo-list {
-  min-width: 30%;
+  min-width: 35%;
   list-style: none;
 }
 
@@ -117,4 +117,46 @@ form button:hover {
 .fall {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
+}
+
+/* remove select styles on filter option */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+/* div select for filter option */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* options inside filter */
+select {
+  color: #fda085;
+  width: 11rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* add arrow back on .select */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #fda085;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* transition on filter arrow */
+.select:hover::after {
+  background: white;
+  color: #ff6f47;
 }
