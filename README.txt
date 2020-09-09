@@ -1,0 +1,1 @@
+A todo list app in Vanilla JavaScript. We are going to put together all the fundamental JavaScript techniques include local storage, and no libraries or frameworks will be used in this small project.
