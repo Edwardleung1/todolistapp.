@@ -97,6 +97,17 @@ function filterTodo(evt) {
           // remove value on UI
           todo.style.display = "none";
         }
+        break;
+      case "uncompleted":
+        // check todo don't contain class of completed
+        if (!todo.classList.contains("completed")) {
+          // show value on UI
+          todo.style.display = "flex";
+        } else {
+          // remove value on UI
+          todo.style.display = "none";
+        }
+        break;
     }
   });
 }
