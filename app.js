@@ -58,6 +58,18 @@ function deleteCheck(evt) {
   if (item.classList[0] === "trash-btn") {
     // remove item's parent element when delete is clicked
     const todo = item.parentElement;
-    todo.remove();
+    // add class fall for animation effect
+    todo.classList.add("fall");
+    // only execute once the transition is completed
+    todo.addEventListener("transitionend", function () {
+      todo.remove();
+    });
+  }
+
+  // Check mark animation with CSS
+  if (item.classList[0] === "complete-btn") {
+    // add toggle completed class on item's parent element when complete btn is clicked
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
   }
 }
