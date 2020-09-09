@@ -2,10 +2,12 @@
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
+const filterOption = document.querySelector(".filter-todo");
 
 // Event Listeners
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
+filterOption.addEventListener("click", filterTodo);
 
 // Functions
 function addTodo(evt) {
@@ -70,6 +72,31 @@ function deleteCheck(evt) {
   if (item.classList[0] === "complete-btn") {
     // add toggle completed class on item's parent element when complete btn is clicked
     const todo = item.parentElement;
+    // add toggle completed for animation effect
     todo.classList.toggle("completed");
   }
+}
+
+// Filter todo function
+function filterTodo(evt) {
+  const todos = todoList.childNodes;
+  // loop over the todo-list to access each individual (todo)
+  todos.forEach(function (todo) {
+    // check value we click on
+    switch (evt.target.value) {
+      case "all":
+        // show all todo value on UI
+        todo.style.display = "flex";
+        break;
+      case "completed":
+        // check todo has class of completed
+        if (todo.classList.contains("completed")) {
+          // show value on UI
+          todo.style.display = "flex";
+        } else {
+          // remove value on UI
+          todo.style.display = "none";
+        }
+    }
+  });
 }
