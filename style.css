@@ -72,6 +72,7 @@ form button:hover {
   display: flex; /* items jump next to each other */
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease;
 }
 
 /* todo li /buttons */
@@ -104,4 +105,16 @@ form button:hover {
 .fa-trash,
 .fa-check {
   pointer-events: none;
+}
+
+/* toggle completed class animation */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* fall class animation */
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }
